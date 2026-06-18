@@ -1,0 +1,113 @@
+{
+  "schema": {
+    "films": {
+      "description": "Array of film objects",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique IMDb ID (e.g., 'tt1375666')"
+          },
+          "title": {
+            "type": "string",
+            "description": "Film title"
+          },
+          "year": {
+            "type": "integer",
+            "description": "Release year"
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of genres (e.g., ['Sci-Fi', 'Thriller'])"
+          },
+          "rating": {
+            "type": "number",
+            "description": "IMDb rating (0-10)"
+          },
+          "plot": {
+            "type": "string",
+            "description": "Short plot summary"
+          },
+          "director": {
+            "type": "string",
+            "description": "Director name"
+          },
+          "cast": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of main actors"
+          },
+          "runtime": {
+            "type": "integer",
+            "description": "Runtime in minutes"
+          },
+          "imdbRating": {
+            "type": "number",
+            "description": "IMDb rating (0-10)"
+          },
+          "streamingOn": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Streaming platforms (e.g., ['Netflix', 'Prime Video'])"
+          }
+        },
+        "required": ["id", "title", "year", "genres", "rating"]
+      }
+    },
+    "tvSeries": {
+      "description": "Array of TV series objects",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique IMDb ID"
+          },
+          "title": {
+            "type": "string",
+            "description": "Series title"
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of genres"
+          },
+          "seasons": {
+            "type": "integer",
+            "description": "Number of seasons"
+          },
+          "episodes": {
+            "type": "integer",
+            "description": "Total number of episodes"
+          },
+          "rating": {
+            "type": "number",
+            "description": "IMDb rating (0-10)"
+          },
+          "plot": {
+            "type": "string",
+            "description": "Short plot summary"
+          },
+          "streamingOn": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Streaming platforms"
+          }
+        },
+        "required": ["id", "title", "genres", "seasons", "rating"]
+      }
+    }
+  }
+}
